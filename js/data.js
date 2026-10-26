@@ -10,7 +10,7 @@ const SONOVOLT_CONFIG = {
     name: "SONOVOLT",
     tagline: "PRODUÇÕES & EVENTOS",
     slogan: "Potência, tecnologia e infraestrutura completa para o seu evento.",
-    email: "sonovolteventos@gmail.com",
+    email: "sonovolt@gmail.com",
     phone: "(12) 98183-0623",
     whatsapp: "(12) 98183-0623",
     whatsappLink: "https://wa.me/5512981830623?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20SONOVOLT%20Eventos.",

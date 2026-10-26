@@ -109,7 +109,7 @@ function loadSiteDraft() {
     company: {
       name: "SONOVOLT",
       tagline: "PRODUÇÕES & EVENTOS",
-      email: "sonovolteventos@gmail.com",
+      email: "sonovolt@gmail.com",
       phone: "(12) 98183-0623",
       whatsappLink: "https://wa.me/5512981830623",
       location: "Guaratinguetá-SP • Vale do Paraíba",
@@ -179,7 +179,7 @@ function toggleMenu() {
 // Navegação de páginas
 const pageTitles = {
   dashboard: ['Visão Geral', 'Painel de Produção & Gestão'],
-  site_builder: ['Criador de Site', 'Editor Visual do Site (Estilo Wix)'],
+  site_builder: ['Redes & Contatos', 'Redes Sociais, Contato & Dados da Empresa'],
   events: ['Agenda de Eventos', 'Agenda de Produção & Shows'],
   timeline: ['Cronograma', 'Cronograma Operacional & Passagem de Som'],
   checklist: ['Checklist', 'Checklist Técnico de Montagem'],
@@ -248,7 +248,7 @@ function dashboardView() {
         <p>Base Guaratinguetá-SP • Controle de infraestrutura, logística de montagem e cronograma de shows.</p>
       </div>
       <div style="display: flex; gap: 10px;">
-        <button class="btn" onclick="go('site_builder')" style="color:var(--accent2); border-color:var(--accent)">🎨 Editar Meu Site (Wix)</button>
+        <button class="btn" onclick="go('site_builder')" style="color:var(--accent2); border-color:var(--accent)">🌐 Redes Sociais & Contato</button>
         <button class="btn primary" onclick="openEventModal()">＋ Novo Evento</button>
       </div>
     </div>
@@ -356,7 +356,7 @@ function siteBuilderView() {
     <!-- Barra Superior de Publicação (Estilo Wix) -->
     <div class="builder-bar">
       <div>
-        <h2 style="font-size: 19px; margin: 0 0 4px; color:#fff;">🎨 Criador & Editor de Site SONOVOLT</h2>
+        <h2 style="font-size: 19px; margin: 0 0 4px; color:#fff;">🌐 Redes Sociais, Contatos & Configurações SONOVOLT</h2>
         <p style="margin: 0; color: var(--muted); font-size: 12px;">Edite as fotos, textos, redes sociais e vídeos. Depois clique em <b>Publicar</b> para atualizar seu site na hora!</p>
       </div>
       <div class="builder-bar-actions">
@@ -420,7 +420,7 @@ function renderBuilderIdentity(comp, soc) {
 
       <div class="field">
         <label>E-mail Oficial</label>
-        <input value="${esc(comp.email || 'sonovolteventos@gmail.com')}" oninput="siteDraft.company.email=this.value">
+        <input value="${esc(comp.email || 'sonovolt@gmail.com')}" oninput="siteDraft.company.email=this.value">
       </div>
       <div class="field">
         <label>Localização / Base Regional</label>

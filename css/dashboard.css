@@ -980,33 +980,67 @@ button {
   }
 }
 
+.mobile-close-sidebar {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .app {
     display: block;
   }
+  .mobile-close-sidebar {
+    display: inline-flex;
+    padding: 4px 10px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    border-radius: 8px;
+  }
   .sidebar {
-    display: none;
+    display: flex;
     position: fixed;
-    inset: 0 auto 0 0;
-    width: 270px;
-    z-index: 50;
-    box-shadow: 15px 0 50px rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 280px;
+    z-index: 1000;
+    transition: left 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 15px 0 50px rgba(0, 0, 0, 0.85);
   }
   .sidebar.open {
-    display: flex;
+    left: 0;
   }
   .topbar {
-    height: 68px;
-    padding: 0 16px;
+    height: 64px;
+    padding: 0 14px;
+  }
+  .topbar h2 {
+    font-size: 15px;
+  }
+  .crumb {
+    font-size: 11px;
   }
   .mobile-menu {
     display: inline-flex;
+    padding: 8px 12px;
+  }
+  .top-actions .avatar {
+    display: none;
   }
   .content {
-    padding: 20px 16px;
+    padding: 16px 12px;
   }
   .stats {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .panel {
+    padding: 16px;
   }
   .report-cards {
     grid-template-columns: 1fr;
@@ -1014,12 +1048,23 @@ button {
   .builder-bar {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
   }
   .builder-bar-actions {
     flex-direction: column;
+    gap: 8px;
   }
   .builder-bar-actions .btn {
     width: 100%;
+  }
+  .builder-tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
 

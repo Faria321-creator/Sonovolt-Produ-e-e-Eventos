@@ -68,7 +68,7 @@ function getActiveConfig() {
     company: {
       name: "SONOVOLT",
       tagline: "PRODUÇÕES & EVENTOS",
-      email: "sonovolteventos@gmail.com",
+      email: "sonovolt@gmail.com",
       phone: "(12) 98183-0623",
       whatsappLink: "https://wa.me/5512981830623",
       location: "Guaratinguetá-SP • Vale do Paraíba",
@@ -113,7 +113,7 @@ function applySiteConfig(conf) {
 
   // Contatos
   const emailEl = document.getElementById("displayEmail");
-  if (emailEl) emailEl.textContent = comp.email || "sonovolteventos@gmail.com";
+  if (emailEl) emailEl.textContent = comp.email || "sonovolt@gmail.com";
 
   const phoneEl = document.getElementById("displayPhone");
   if (phoneEl) phoneEl.textContent = comp.phone || "(12) 98183-0623";
@@ -707,9 +707,19 @@ function initMenu() {
   const navLinks = document.getElementById("navLinks");
   if (!toggleBtn || !navLinks) return;
 
-  toggleBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("open");
+  });
+
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => navLinks.classList.remove("open"));
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+      navLinks.classList.remove("open");
+    }
   });
 }
 
@@ -728,7 +738,7 @@ function initForm(conf) {
     const date = document.getElementById("date").value;
     const details = document.getElementById("details").value.trim();
 
-    const comp = conf.company || { email: "sonovolteventos@gmail.com" };
+    const comp = conf.company || { email: "sonovolt@gmail.com" };
 
     const subject = encodeURIComponent(`Pedido de Orçamento SONOVOLT — ${kind}`);
     const message = `Olá, SONOVOLT Produções e Eventos!

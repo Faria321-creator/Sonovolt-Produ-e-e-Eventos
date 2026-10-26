@@ -1,0 +1,287 @@
+/* ==========================================================================
+   SONOVOLT Produções e Eventos - Estilos Responsivos Oficiais
+   Garante funcionamento impecável e elegante em Celulares e Tablets
+   ========================================================================== */
+
+/* ------------------------------------------------------------------
+   1. TABLETS E TELAS MÉDIAS (Menor ou igual a 1024px)
+   ------------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .hero p {
+    margin: 0 auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-note {
+    justify-content: center;
+    text-align: left;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   2. SMARTPHONES E TELAS PEQUENAS (Menor ou igual a 768px)
+   ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+  /* Topo Fixo e Compacto - NUNCA quebra ou vaza */
+  .top {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(9, 13, 20, 0.98);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-glow);
+  }
+
+  body.editing-active .top {
+    top: 60px;
+  }
+
+  .nav {
+    height: 66px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+  }
+
+  .brand {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+
+  .brand-logo-img {
+    height: 42px !important;
+    max-width: 120px !important;
+    width: auto !important;
+    border-radius: 6px;
+  }
+
+  .brand-text strong {
+    font-size: 15px !important;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .brand-text small {
+    font-size: 8px !important;
+    letter-spacing: 1px;
+  }
+
+  .nav-right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0;
+  }
+
+  /* No celular, esconde ícones do header para evitar poluição visual */
+  .social-nav-icons {
+    display: none !important;
+  }
+
+  /* Botão rápido compacto no topo (só no desktop é o grandão) */
+  .nav-right > .btn.primary.zap-link {
+    padding: 7px 12px !important;
+    font-size: 12px !important;
+    border-radius: 8px !important;
+    white-space: nowrap;
+  }
+
+  /* Botão Menu Hambúrguer */
+  .menu-toggle {
+    display: grid !important;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--line-glow);
+    border-radius: 10px;
+    background: #111b2b;
+    color: var(--electric-cyan);
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* Menu Gaveta Dropdown quando aberto */
+  .links {
+    display: none;
+    position: fixed;
+    top: 66px;
+    left: 0;
+    right: 0;
+    background: #090d14;
+    border-bottom: 2px solid var(--electric-cyan);
+    padding: 22px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+  }
+
+  .links.open {
+    display: flex !important;
+  }
+
+  .links a {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2eaf5;
+  }
+
+  /* Hero Section no Mobile */
+  .hero {
+    padding: 45px 0 40px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 7vw, 40px) !important;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 14.5px !important;
+    line-height: 1.6;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    padding: 6px 12px;
+    margin-bottom: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .hero-art {
+    min-height: auto;
+    margin-top: 10px;
+  }
+
+  .visual-card {
+    width: 100%;
+    transform: none;
+  }
+
+  .visual-card img {
+    height: 230px;
+  }
+
+  .floating {
+    display: none; /* Esconde floats decorativos para não poluir tela pequena */
+  }
+
+  /* Grids no Mobile */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .about-visual {
+    height: 280px;
+  }
+
+  .about-nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    padding: 16px 0;
+    gap: 10px;
+  }
+
+  .trust-item {
+    font-size: 12.5px;
+    justify-content: flex-start;
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    letter-spacing: -0.8px;
+  }
+
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   3. DISPOSITIVOS MUITO ESTREITOS (Menor ou igual a 420px)
+   ------------------------------------------------------------------ */
+@media (max-width: 420px) {
+  .brand-text strong {
+    font-size: 13.5px !important;
+  }
+  .brand-text small {
+    display: none; /* Em telas muito finas, esconde o subtítulo para economizar espaço */
+  }
+  .brand-logo-img {
+    height: 36px !important;
+    max-width: 90px !important;
+  }
+  .nav-right > .btn.primary.zap-link {
+    display: none; /* No topo muito estreito, deixa só o menu hambúrguer */
+  }
+}

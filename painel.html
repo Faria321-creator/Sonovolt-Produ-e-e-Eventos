@@ -46,13 +46,16 @@
   <div class="app" id="appMain" style="display: none;">
     <!-- Barra Lateral de Navegação -->
     <aside class="sidebar" id="sidebar">
-      <a class="brand" href="index.html" title="Visualizar Site Oficial">
-        <img src="assets/logo-sonovolt.jpg" alt="SONOVOLT" class="brand-img">
-        <div>
-          <strong>SONOVOLT</strong>
-          <small>PRODUÇÕES & EVENTOS</small>
-        </div>
-      </a>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <a class="brand" href="index.html" title="Visualizar Site Oficial">
+          <img src="assets/logo-sonovolt.jpg" alt="SONOVOLT" class="brand-img">
+          <div>
+            <strong>SONOVOLT</strong>
+            <small>PRODUÇÕES & EVENTOS</small>
+          </div>
+        </a>
+        <button class="btn xbtn mobile-close-sidebar" onclick="toggleMenu()" title="Fechar Menu">✕</button>
+      </div>
 
       <div>
         <div class="nav-label">WORKSPACE OPERACIONAL</div>
@@ -64,7 +67,8 @@
             <span class="ico">✏️</span>Editar Site na Tela
           </a>
 
-          
+          <!-- Botão para Configurar Redes Sociais e Contatos -->
+          <button data-page="site_builder"><span class="ico">🌐</span>Redes Sociais & Contato</button>
           <button data-page="events"><span class="ico">▣</span>Agenda de Eventos</button>
           <button data-page="timeline"><span class="ico">◷</span>Cronograma</button>
           <button data-page="checklist"><span class="ico">☑</span>Checklist de Montagem</button>
